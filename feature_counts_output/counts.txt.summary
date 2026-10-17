@@ -1,0 +1,15 @@
+Status	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720968_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720969_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720970_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720971_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720972_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720973_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720974_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720975_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720976_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720977_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720978_Aligned.sortedByCoord.out.bam	/home/bg/drosophila_brain_rna_seq_data_1/bam_files/SRR29720979_Aligned.sortedByCoord.out.bam
+Assigned	13752499	15325249	16418348	17010715	18254062	17013592	16985883	28212454	16031845	17762074	25619089	29970275
+Unassigned_Unmapped	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Read_Type	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_MultiMapping	4269962	6725923	8064563	5112110	5176448	3761780	3440336	10004825	3529035	4094148	12441539	8974672
+Unassigned_Secondary	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	1687241	2264309	3264790	2188436	1833679	1701518	1124545	3068653	1597533	1846455	4025349	2990966
+Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0	0	0	0	0
+Unassigned_Ambiguity	742737	930950	924437	967279	1005508	930122	886015	1673649	842107	925151	1544424	1633863
