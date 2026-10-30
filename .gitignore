@@ -18,3 +18,6 @@ uv.lock
 **/*.history
 **/*.RData
 
+
+# Claude Desktop context (local only, keep untracked)
+CLAUDE_DESKTOP_CONTEXT.md
