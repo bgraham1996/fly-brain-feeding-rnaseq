@@ -19,21 +19,23 @@ import time
 # loading env variables
 load_dotenv()
 email = os.getenv('Email')
+if not email:
+    print("No NCBI email found. Create a .env file next to this script with: Email=you@example.com")
+    sys.exit(1)
 
 # setting up variables
 Entrez.email = email
 timestamp = str(dt.now())
 
-# server mounts
-SERVER_MOUNT = Path.home() / "server" 
-PROJECT_DIR = SERVER_MOUNT / "drosophila_brain_rna_seq_data_1"
+# project paths — anchored to this script's directory so it runs directly on the
+# server from inside the repo (the data dirs live alongside the scripts)
+PROJECT_DIR = Path(__file__).resolve().parent
 SRA_DIR = PROJECT_DIR / "sra_files"
 FASTQ_DIR = PROJECT_DIR / "fastq_files"
 
-# checking server connection
-if SERVER_MOUNT.exists() != True:
-    print("Server not mounted, stopping script")
-    sys.exit()
+# make sure the download targets exist
+SRA_DIR.mkdir(parents=True, exist_ok=True)
+FASTQ_DIR.mkdir(parents=True, exist_ok=True)
 
 # searching for SRA entries:
 handle = Entrez.esearch(db="sra", term="PRJNA1132369", retmax=1000)
