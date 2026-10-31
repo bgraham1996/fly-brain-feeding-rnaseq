@@ -4,7 +4,7 @@ from goatools.obo_parser import GODag
 from goatools.anno.gaf_reader import GafReader
 from goatools.goea.go_enrichment_ns import GOEnrichmentStudyNS
 
-ROOT = Path.home() / "fly_rna_1"
+ROOT = Path(__file__).resolve().parent
 GO_REF = ROOT / "go_analysis"
 DSEQ_FILES = ROOT / "R_notebooks" / "initial_dseq_analysis"
 

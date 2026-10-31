@@ -49,7 +49,7 @@ if isinstance(run_info, bytes):
     run_info = run_info.decode('utf-8')
 df = pd.read_csv(StringIO(run_info))
 """print(df.columns.tolist())"""
-df.to_csv(f'runinfo_{timestamp}.csv')
+df.to_csv(PROJECT_DIR / f'runinfo_{timestamp}.csv')
 
 # get a list of the file paths and download the files
 fastq_urls = df['Run'].to_list()
@@ -75,6 +75,6 @@ for fastq in fastq_urls:
         error_log.loc[len(error_log)] = [fastq, e]
 
 if len(error_log) > 0:
-    error_log.to_csv(f'download_report_{timestamp}.csv')
+    error_log.to_csv(PROJECT_DIR / f'download_report_{timestamp}.csv')
 else:
     print("All files downloaded and processed")

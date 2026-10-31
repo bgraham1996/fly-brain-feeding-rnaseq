@@ -1,9 +1,8 @@
 import subprocess
 from pathlib import Path
 
-# server mounts
-SERVER_MOUNT = Path.home()
-PROJECT_DIR = SERVER_MOUNT / "drosophila_brain_rna_seq_data_1"
+# paths anchored to this script's directory (the repo, where the data lives)
+PROJECT_DIR = Path(__file__).resolve().parent
 BAM_DIR = PROJECT_DIR / "bam_files"
 REF_DIR = PROJECT_DIR / "reference_genome"
 FEATS_OUT_DIR = PROJECT_DIR / "feature_counts_output"

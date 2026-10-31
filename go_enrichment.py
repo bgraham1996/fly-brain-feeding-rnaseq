@@ -8,8 +8,7 @@ from goatools.goea.go_enrichment_ns import GOEnrichmentStudyNS
 experiments = ['starved_vs_fed', 'starved_vs_untrained', 'untrained_vs_fed']
 
 """"files"""
-SERVER = Path.home()
-ROOT = SERVER / "fly_rna_1"
+ROOT = Path(__file__).resolve().parent
 DSEQ_FILES = ROOT / "R_notebooks" / "initial_dseq_analysis"
 OUT = ROOT / "go_output"
 GO_REF = ROOT / "go_analysis"
