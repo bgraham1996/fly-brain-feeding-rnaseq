@@ -21,3 +21,7 @@ uv.lock
 
 # Claude Desktop context (local only, keep untracked)
 CLAUDE_DESKTOP_CONTEXT.md
+
+# Python bytecode
+__pycache__/
+*.pyc
