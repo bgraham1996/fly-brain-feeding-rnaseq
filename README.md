@@ -104,21 +104,22 @@ Two methodological choices were made from the data rather than by default:
 
 ## Data layout
 
-Code is tracked; all large data directories are **git-ignored** (`.gitignore`) and live only
-on the server:
+The only data committed to the repo is the processed **count matrix**
+(`feature_counts_output/counts.txt`, ~5.5 MB) — the reproducibility entry point: DESeq2 and GO
+can be re-run from it alone, without the raw reads. Everything else below is **git-ignored**
+(`.gitignore`) and lives only on the server:
 
 ```
 sra_files/  fastq_files/  trimmed_fastq/   # reads (~49G fastq, ~45G trimmed)
 genome_index/  reference_genome/  reference_transcriptome/   # refs + STAR index (~2G)
 bam_files/                       # STAR alignments (~26G), no .bai yet
-feature_counts_output/counts.txt # raw count matrix
-cleaned_expression_changes/*_cleaned.csv   # top-75 DEGs per contrast
+cleaned_expression_changes/      # top-75 DEG tables per contrast (regenerate from counts.txt + DESeq2)
 go_analysis/  go_output/         # GO inputs + (empty) enrichment output
 reports/                         # fastp + MultiQC QC reports
 R_notebooks/initial_dseq_analysis/deseq2_analysis.RData   # saved DESeq2 session
 ```
 
-Total ~122 GB on the server; nothing is mirrored to the Mac.
+Total ~122 GB on the server; only `counts.txt` is mirrored into version control.
 
 ## Documentation
 

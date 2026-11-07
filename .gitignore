@@ -3,9 +3,9 @@
 bam_files/
 cleaned_expression_changes/
 fastq_files/
-feature_counts_output/
 genome_index/
 go_analysis/
+go_output/
 reference_genome/
 reference_transcriptome/
 reports/
@@ -18,6 +18,15 @@ uv.lock
 **/*.history
 **/*.RData
 
+# featureCounts output: ignore everything EXCEPT the processed count matrix,
+# which is kept in-repo as the reproducibility entry point (DESeq2/GO re-run from it).
+feature_counts_output/*
+!feature_counts_output/counts.txt
+!feature_counts_output/counts.txt.summary
+
+# Verbose strandedness-test dump (4.8 MB); the conclusion (-s 0, unstranded) is in the README.
+# The small .summary is kept as evidence.
+/strandedness_test_s0.txt
 
 # Claude Desktop context (local only, keep untracked)
 CLAUDE_DESKTOP_CONTEXT.md
